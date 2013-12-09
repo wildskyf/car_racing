@@ -1,7 +1,16 @@
+#lib
+bin
+obj
+
 # Compiled Object files
 *.slo
 *.lo
 *.o
+
+#only for codeblocks
+*.cbp
+*.depend
+*.layout
 
 # Compiled Dynamic libraries
 *.so
