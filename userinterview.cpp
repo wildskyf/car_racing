@@ -25,7 +25,7 @@ void keepcenter(string s)
     }
 }
 
-void printtile()
+void firstmanu()
 {
     longtab();
     printf("\n\n");
@@ -33,5 +33,14 @@ void printtile()
     keepcenter(s);
     printf("\n\n");
     longtab();
+    printf("\n");
+    string item[3];
+    item[0]="play!";
+    item[1]="setting";
+    item[2]="exit";
+    for(int a=0;a<3;a++)
+    {
+         printf("\n(%d) %s\n",a+1,item[a].c_str());
+    }
 }
 

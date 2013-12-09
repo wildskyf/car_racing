@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1386505167 source:/home/wildsky/Desktop/40247038S-final/main.cpp
+1386580196 source:/home/wildsky/Desktop/40247038S-final/main.cpp
 	<stdio.h>
 	<stdlib.h>
 	"userinterview.h"
+	<string>
 
-1386036090 /home/wildsky/Desktop/40247038S-final/userinterview.h
+1386579912 /home/wildsky/Desktop/40247038S-final/userinterview.h
 
-1386037516 source:/home/wildsky/Desktop/40247038S-final/userinterview.cpp
+1386579912 source:/home/wildsky/Desktop/40247038S-final/userinterview.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string>

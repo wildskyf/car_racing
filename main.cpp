@@ -4,7 +4,6 @@
 
 int main()
 {
-    printtile();
- //   printf("\n\ntest line\n");
+    firstmanu();
     return 0;
 }

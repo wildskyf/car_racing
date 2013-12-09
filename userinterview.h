@@ -1,1 +1,1 @@
-void printtile();
+void firstmanu();
