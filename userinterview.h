@@ -1,1 +1,3 @@
-void firstmanu();
+int firstmenu();
+void menuprocess(int choice);
+int input();

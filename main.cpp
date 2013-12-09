@@ -4,6 +4,6 @@
 
 int main()
 {
-    firstmanu();
+    menuprocess(firstmenu());
     return 0;
 }
