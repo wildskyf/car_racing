@@ -5,6 +5,6 @@
 int main()
 {
     printtile();
-    printf("\n\ntest line\n");
+ //   printf("\n\ntest line\n");
     return 0;
 }
