@@ -1,16 +1,18 @@
 #include<stdio.h>
-#include<stdlib.h>
 #include<iostream>
 #include"userinterview.h"
 #include<string>
+#include"main.h"
+#include"processing.h"
 constexpr int width = 20;
 using namespace std;
+
 
 void longtab()
 {
     for(int a=0; a<width; a++)
     {
-        printf("#");
+        cout<<"#";
     }
 }
 
@@ -18,23 +20,20 @@ void keepcenter(string s)
 {
     for(int a=0; a<4; a++)
     {
-        printf(" ");
+        cout<<" ";
     }
-    printf("%s",s.c_str());
-    for(int a=0; a<4; a++)
-    {
-        printf(" ");
-    }
+    cout<<s.c_str();
 }
 void title()
 {
+    system("clear");
     longtab();
-    printf("\n\n");
+    cout<<"\n\n";
     string s="The Car Game";
     keepcenter(s);
-    printf("\n\n");
+    cout<<"\n\n";
     longtab();
-    printf("\n");
+    cout<<"\n";
 }
 
 int firstmenu()
@@ -48,59 +47,64 @@ int firstmenu()
     {
         printf("\n(%d) %s\n",a+1,item[a].c_str());
     }
-    return input();
+    return inputchoice();
 }
 
-int input()
+
+int inputchoice()
 {
-    printf("\nPlease input your choice===>");
-    int menu_choice=0;
-    scanf("%d",&menu_choice);
-    return menu_choice;
+    cout<<"\nPlease input your choice===>";
+    int choice=0;
+    scanf("%d",&choice);
+    return choice;
 }
 
 void menuprocess(int choice)
 {
     do
     {
+        int setchoice;
         string setitem[3];
-        switch(choice)
+        if( choice == 1)
         {
-        case 1:
-            break;
-
-        case 2:
-            system("clear");
             title();
-            printf("\nS E T T I N G\n");
+        }
+
+        else if(choice ==2)
+        {
+            title();
+            printf("\nSETTING\n");
             setitem[0]="speed";
             setitem[1]="column";
             setitem[2]="exit";
             for(int a=0; a<3; a++)
             {
-                printf("\n(%d) %s\n",a+1,setitem[a].c_str());
+                cout << "\n("<<a+1<<") "<<setitem[a].c_str()<<"\n";
             }
-            input();
-
+            setchoice = inputchoice();
+            if(setchoice==1)
+            {}
+            else if(setchoice==2)
+            {}
+            else if(setchoice==3)
+            {break;}
+            else
+            {}
+        }
+        else if(choice ==3)
+        {
             break;
-
-        case 3:
-            break;
-
-        default:
-            printf("Invalid Command!\n");
-
-
-            //To be repaired
-            cout << "\nEnter to move on. ";
+        }
+        else
+        {
+            cout << "Invalid Command!\n\nEnter to move on. ";
             cin.ignore().get();
-            firstmenu();
-            //To be repaired
-
-
             break;
         }
     }
     while(choice!=3 );
+    if(choice!=3)
+    {main();}
 }
+
 
