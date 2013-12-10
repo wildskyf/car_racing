@@ -2,7 +2,8 @@
 #include<stdlib.h>
 #include<iostream>
 #include"userinterview.h"
-constexpr int width = 50;
+#include<string>
+constexpr int width = 20;
 using namespace std;
 
 void longtab()
@@ -25,8 +26,7 @@ void keepcenter(string s)
         printf(" ");
     }
 }
-
-int firstmenu()
+void title()
 {
     longtab();
     printf("\n\n");
@@ -35,6 +35,11 @@ int firstmenu()
     printf("\n\n");
     longtab();
     printf("\n");
+}
+
+int firstmenu()
+{
+    title();
     string item[3];
     item[0]="play!";
     item[1]="setting";
@@ -58,12 +63,25 @@ void menuprocess(int choice)
 {
     do
     {
+        string setitem[3];
         switch(choice)
         {
         case 1:
             break;
 
         case 2:
+            system("clear");
+            title();
+            printf("\nS E T T I N G\n");
+            setitem[0]="speed";
+            setitem[1]="column";
+            setitem[2]="exit";
+            for(int a=0; a<3; a++)
+            {
+                printf("\n(%d) %s\n",a+1,setitem[a].c_str());
+            }
+            input();
+
             break;
 
         case 3:
@@ -83,6 +101,6 @@ void menuprocess(int choice)
             break;
         }
     }
-    while(choice!=3);
+    while(choice!=3 );
 }
 
