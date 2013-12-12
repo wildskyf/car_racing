@@ -3,7 +3,7 @@
 #include"userinterview.h"
 #include<string>
 #include"main.h"
-#include"processing.h"
+#include"mywindowscommand.h"
 constexpr int width = 20;
 using namespace std;
 
@@ -26,7 +26,7 @@ void keepcenter(string s)
 }
 void title()
 {
-    system("clear");
+    System("clr");
     longtab();
     cout<<"\n\n";
     string s="The Car Game";
@@ -97,8 +97,7 @@ void menuprocess(int choice)
         }
         else
         {
-            cout << "Invalid Command!\n\nEnter to move on. ";
-            cin.ignore().get();
+            System("pause");
             break;
         }
     }
