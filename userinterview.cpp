@@ -4,7 +4,7 @@
 #include<string>
 #include"main.h"
 #include"mywindowscommand.h"
-constexpr int width = 20;
+constexpr int width = 30;
 using namespace std;
 
 
@@ -29,7 +29,7 @@ void title()
     System("clr");
     longtab();
     cout<<"\n\n";
-    string s="The Car Game";
+    string s="Racing Driving Game";
     keepcenter(s);
     cout<<"\n\n";
     longtab();
