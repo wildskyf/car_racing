@@ -20,4 +20,7 @@ obj
 *.lai
 *.la
 *.a
+
+others
 *.*~
+*.pub
