@@ -1,6 +1,7 @@
 #lib
 bin
 obj
+setcolor.cpp
 
 # Compiled Object files
 *.slo
@@ -25,3 +26,4 @@ others
 *.*~
 *.pub
 *key
+*key2
