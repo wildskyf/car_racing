@@ -1,52 +1,16 @@
-#include<stdio.h>
+
 #include<iostream>
-#include"userinterview.h"
 #include<string>
 #include"main.h"
 #include"mywindowscommand.h"
-constexpr int width = 30;
+#include<stdlib.h>
+#include"graghic.h"
+#include"processing.h"
+
 using namespace std;
-
-
-void longtab()
+int main_inerface()
 {
-    for(int a=0; a<width; a++)
-    {
-        cout<<"#";
-    }
-}
-
-void keepcenter(string s)
-{
-    for(int a=0; a<4; a++)
-    {
-        cout<<" ";
-    }
-    cout<<s.c_str();
-}
-void title()
-{
-    System("clr");
-    longtab();
-    cout<<"\n\n";
-    string s="Racing Driving Game";
-    keepcenter(s);
-    cout<<"\n\n";
-    longtab();
-    cout<<"\n";
-}
-
-int firstmenu()
-{
-    title();
-    string item[3];
-    item[0]="play!";
-    item[1]="setting";
-    item[2]="exit";
-    for(int a=0; a<3; a++)
-    {
-        printf("\n(%d) %s\n",a+1,item[a].c_str());
-    }
+    firstmenu();
     return inputchoice();
 }
 
@@ -55,7 +19,7 @@ int inputchoice()
 {
     cout<<"\nPlease input your choice===>";
     int choice=0;
-    scanf("%d",&choice);
+    cin>>choice;
     return choice;
 }
 
@@ -73,7 +37,7 @@ void menuprocess(int choice)
         else if(choice ==2)
         {
             title();
-            printf("\nSETTING\n");
+            cout << "\nSETTING\n";
             setitem[0]="speed";
             setitem[1]="column";
             setitem[2]="exit";
@@ -97,7 +61,8 @@ void menuprocess(int choice)
         }
         else
         {
-            System("pause");
+            cout << "Invalid Command!\n\n";
+            system("pause");
             break;
         }
     }

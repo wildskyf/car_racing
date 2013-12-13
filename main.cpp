@@ -1,8 +1,8 @@
 #include<stdio.h>
-#include"userinterview.h"
+#include"processing.h"
 
 int main()
 {
-    menuprocess(firstmenu());
+    menuprocess(main_inerface());
     return 0;
 }
