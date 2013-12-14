@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<string>
 #include"main.h"
@@ -6,8 +5,9 @@
 #include<stdlib.h>
 #include"graghic.h"
 #include"processing.h"
-
 using namespace std;
+
+
 int main_inerface()
 {
     firstmenu();
@@ -32,6 +32,9 @@ void menuprocess(int choice)
         if( choice == 1)
         {
             title();
+            cout<<"Your score is "<<Selectdifficulty()<<"\n";
+            system("pause");
+            break;
         }
 
         else if(choice ==2)
@@ -47,11 +50,15 @@ void menuprocess(int choice)
             }
             setchoice = inputchoice();
             if(setchoice==1)
-            {}
+            {
+
+            }
             else if(setchoice==2)
             {}
             else if(setchoice==3)
-            {break;}
+            {
+                break;
+            }
             else
             {}
         }
@@ -68,7 +75,37 @@ void menuprocess(int choice)
     }
     while(choice!=3 );
     if(choice!=3)
-    {main();}
+    {
+        main();
+    }
 }
 
+int Selectdifficulty()
+{
+    cout << "Select a difficulty";
+
+    for(int a=1; a<=3; a++)
+    {
+        cout << "\n\n("<<a<<")";
+
+        for(int b=1; b<=a; b++)
+        {
+            cout << "*";
+        }
+    }
+    cout<<"\n";
+          inputchoice();
+          game();
+
+         return 0;
+}
+
+void game()
+{
+    cout << "Press any key to start\n";
+    system("pause");
+    system("cls");
+    road();
+    mycar();
+}
 

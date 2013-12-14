@@ -1,7 +1,8 @@
 #include<iostream>
 #include<stdlib.h>
 #include"processing.h"
-constexpr int width = 30;
+#include<time.h>
+constexpr int width =27;
 using namespace std;
 
 void firstmenu()
@@ -44,4 +45,33 @@ void title()
     cout<<"\n\n";
     longtab();
     cout<<"\n";
+}
+
+void mycar()
+{
+    cout <<"        ¢p\n"
+         <<"      ¢p¢p¢p\n"
+         <<"        ¢p\n"
+         <<"      ¢p¢p¢p\n";
+}
+
+void road()
+{
+    for(int row=0; row<30; row++)
+    {
+        if(row%2 == 0)
+        {
+
+            cout <<"||";
+            for(int a=0; a<50; a++)
+            {
+                cout << " ";
+            }
+            cout <<"||\n";
+        }
+        else
+        {
+            cout <<"\n";
+        }
+    }
 }
