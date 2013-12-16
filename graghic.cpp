@@ -67,6 +67,10 @@ void road()
             {
                 cout << " ";
             }
+
+
+
+
             cout <<"||\n";
         }
         else
