@@ -106,6 +106,8 @@ void game()
     system("pause");
     system("cls");
     road();
-    mycar();
+    mycar_left();
+    mycar_center();
+    mycar_right();
 }
 

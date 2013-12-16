@@ -2,9 +2,11 @@
 #include<stdlib.h>
 #include"processing.h"
 #include<time.h>
+#include"graghic.h"
+
 constexpr int width =27;
 using namespace std;
-
+const string space = "\t";
 void firstmenu()
 {
     title();
@@ -47,12 +49,26 @@ void title()
     cout<<"\n";
 }
 
-void mycar()
+void mycar_left()
 {
-    cout <<"        ¢p\n"
-         <<"      ¢p¢p¢p\n"
-         <<"        ¢p\n"
-         <<"      ¢p¢p¢p\n";
+    cout <<space<<"  N\n"
+         <<space<<"O T O\n"
+         <<space<<"  N\n"
+         <<space<<"O U O\n";
+}
+void mycar_center()
+{
+    cout <<space<<space<<space<<"  N\n"
+         <<space<<space<<space<<"O T O\n"
+         <<space<<space<<space<<"  N\n"
+         <<space<<space<<space<<"O U O\n";
+}
+void mycar_right()
+{
+    cout <<space<<space<<space<<space<<space<<"  N\n"
+         <<space<<space<<space<<space<<space<<"O T O\n"
+         <<space<<space<<space<<space<<space<<"  N\n"
+         <<space<<space<<space<<space<<space<<"O U O\n";
 }
 
 void road()
@@ -67,10 +83,6 @@ void road()
             {
                 cout << " ";
             }
-
-
-
-
             cout <<"||\n";
         }
         else
@@ -79,3 +91,4 @@ void road()
         }
     }
 }
+
