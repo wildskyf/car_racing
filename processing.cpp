@@ -5,6 +5,8 @@
 #include<stdlib.h>
 #include"graghic.h"
 #include"processing.h"
+#include<stdio.h>
+#include <conio.h>
 using namespace std;
 
 
@@ -94,20 +96,34 @@ int Selectdifficulty()
         }
     }
     cout<<"\n";
-          inputchoice();
-          game();
+    inputchoice();
+    game();
 
-         return 0;
+    return 0;
+}
+
+void control_path()
+{
+    char ch1, path;
+    while( ch1 = getch() )
+    {
+        if(ch1 == -32)
+        {
+
+            path = getch();
+
+            mycar_path(path);//75for left , 77 for left
+        }
+    }
 }
 
 void game()
 {
+
     cout << "Press any key to start\n";
     system("pause");
     system("cls");
-    road();
-    mycar_left();
-    mycar_center();
-    mycar_right();
+//    road();
+    control_path();
 }
 

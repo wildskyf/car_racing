@@ -49,12 +49,57 @@ void title()
     cout<<"\n";
 }
 
-void mycar_left()
+// -1 for left, 0 for center, 1 for right
+
+void mycar_path(char path)
 {
-    cout <<space<<"  N\n"
-         <<space<<"O T O\n"
-         <<space<<"  N\n"
-         <<space<<"O U O\n";
+    if(path == 75)   // left
+    {
+        cout <<space<<space<<space;
+             cout <<"  N\n";
+             cout <<space<<space<<space;
+             cout <<"O T O\n";
+             cout <<space<<space<<space;
+             cout <<"  N\n";
+             cout <<space<<space<<space;
+             cout <<"O U O\n";
+    }
+  /*  else if(path == 0)
+    {
+        cout <<space<<space<<space;
+             cout <<"  N\n";
+             cout <<space<<space<<space;
+             cout <<"O T O\n";
+             cout <<space<<space<<space;
+             cout <<"  N\n";
+             cout <<space<<space<<space;
+             cout <<"O U O\n";
+    }*/
+    else if(path == 77)
+    {
+        cout <<space<<space<<space<<space;
+             cout <<"  N\n";
+             cout <<space<<space<<space<<space;
+             cout <<"O T O\n";
+             cout <<space<<space<<space<<space;
+             cout <<"  N\n";
+             cout <<space<<space<<space<<space;
+             cout <<"O U O\n";
+    }
+
+
+}
+
+/*void mycar_left()
+{
+    cout <<space
+         cout <<"  N\n"
+         cout <<space
+         cout <<"O T O\n"
+         cout <<space
+         cout <<"  N\n"
+         cout <<space
+         cout <<"O U O\n";
 }
 void mycar_center()
 {
@@ -70,7 +115,7 @@ void mycar_right()
          <<space<<space<<space<<space<<space<<"  N\n"
          <<space<<space<<space<<space<<space<<"O U O\n";
 }
-
+*/
 void road()
 {
     for(int row=0; row<30; row++)
