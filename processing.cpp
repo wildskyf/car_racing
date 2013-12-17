@@ -104,16 +104,19 @@ int Selectdifficulty()
 
 void control_path()
 {
+    int timecount= 0;
+    int *timec = &timecount;
     char ch1, path;
     while( ch1 = getch() )
     {
         if(ch1 == -32)
         {
 
-            path = getch();
-            mycar_path(path);//75for left , 77 for left
+       //     path = ;
+            mycar_path(getch(),timec);//75for left , 77 for left
+            timecount++;
         }
-        cout << "\n";
+    //    cout << "\n";
     }
 }
 
@@ -123,7 +126,7 @@ void game()
     cout << "Press any key to start\n";
     system("pause");
     system("cls");
- //   road();
+
     control_path();
 }
 

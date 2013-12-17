@@ -7,6 +7,7 @@
 constexpr int width =27;
 using namespace std;
 const string space = "\t";
+const string space3 = "\t\t\t";
 void firstmenu()
 {
     title();
@@ -51,88 +52,108 @@ void title()
 
 // -1 for left, 0 for center, 1 for right
 
-void mycar_path(char path)
+void mycar_path(char path,int *timec)
 {
+    system("cls");
+    road(timec);
     if(path == 75)   // left
     {
-        cout <<space<<space<<space;
-             cout <<"||  N"<<space<<"     ||\n";
-             cout <<space<<space<<space;
-             cout <<"||O T O"<<space<<"     ||\n";
-             cout <<space<<space<<space;
-             cout <<"||  N"<<space<<"     ||\n";
-             cout <<space<<space<<space;
-             cout <<"||O U O"<<space<<"     ||\n";
-    }
-  /*  else if(path == 0)
-    {
-        cout <<space<<space<<space;
-             cout <<"  N\n";
-             cout <<space<<space<<space;
-             cout <<"O T O\n";
-             cout <<space<<space<<space;
-             cout <<"  N\n";
-             cout <<space<<space<<space;
-             cout <<"O U O\n";
-    }*/
-    else if(path == 77)
-    {
-        cout <<space<<space<<space<<"||"<<space;
-             cout <<"  N  ||\n";
-             cout <<space<<space<<space<<"||"<<space;
-             cout <<"O T O||\n";
-             cout <<space<<space<<space<<"||"<<space;
-             cout <<"  N  ||\n";
-             cout <<space<<space<<space<<"||"<<space;
-             cout <<"O U O||\n";
-    }
 
-
-}
-
-/*void mycar_left()
-{
-    cout <<space
-         cout <<"  N\n"
-         cout <<space
-         cout <<"O T O\n"
-         cout <<space
-         cout <<"  N\n"
-         cout <<space
-         cout <<"O U O\n";
-}
-void mycar_center()
-{
-    cout <<space<<space<<space<<"  N\n"
-         <<space<<space<<space<<"O T O\n"
-         <<space<<space<<space<<"  N\n"
-         <<space<<space<<space<<"O U O\n";
-}
-void mycar_right()
-{
-    cout <<space<<space<<space<<space<<space<<"  N\n"
-         <<space<<space<<space<<space<<space<<"O T O\n"
-         <<space<<space<<space<<space<<space<<"  N\n"
-         <<space<<space<<space<<space<<space<<"O U O\n";
-}
-*/
-void road()
-{
-    for(int row=0; row<30; row++)
-    {
-        if(row%2 == 0)
+        if(*timec% 2 ==0)
         {
+            cout <<space3
+                 <<"||  N"<<space<<"     ||\n"
+                 <<space3
+                 <<"  O T O"<<space<<"\n"
+                 <<space3
+                 <<"||  N"<<space<<"     ||\n"
+                 <<space3
+                 <<"  O U O"<<space<<"\n";
 
-            cout <<"||";
-            for(int a=0; a<50; a++)
-            {
-                cout << " ";
-            }
-            cout <<"||\n";
         }
         else
         {
-            cout <<"\n";
+            cout <<space3
+                 <<"    N"<<space<<"\n"
+                 <<space3
+                 <<"||O T O"<<space<<"     ||\n"
+                 <<space3
+                 <<"    N"<<space<<"\n"
+                 <<space3
+                 <<"||O U O"<<space<<"     ||\n";
+
+        }
+    }
+
+    else if(path == 77)
+    {
+        if(*timec % 2 ==0)
+        {
+            cout <<space3
+                 <<"||"<<space<<"  N  ||\n"
+                 <<space3
+                 <<"  "<<space<<"O T O\n"
+                 <<space3
+                 <<"||"<<space<<"  N  ||\n"
+                 <<space3
+                 <<"  "<<space<<"O U O\n";
+
+        }
+        else
+        {
+            cout <<space3
+                 <<"  "<<space<<"  N\n"
+                 <<space3
+                 <<"||"<<space<<"O T O||\n"
+                 <<space3
+                 <<"  "<<space<<"  N\n"
+                 <<space3
+                 <<"||"<<space<<"O U O||\n";
+
+        }
+    }
+
+
+}
+
+void road(int *timec)
+{
+    if(*timec % 2 ==0)
+    {
+        for(int b=0; b<4; b++)
+        {
+            for(int a=0; a<4; a++)
+            {
+                if(a % 2 ==0)
+                {
+                    cout <<space3
+                         <<"||"<<space<<"     ||\n";
+                }
+                else
+                {
+                    cout <<"\n";
+                }
+
+            }
+            //   cout <<"\n";
+        }
+    }
+    else
+    {
+        for(int b=0; b<4; b++)
+        {
+            for(int a=0; a<4; a++)
+            {
+                if(a % 2 ==0)
+                {
+                    cout <<"\n";
+                }
+                else
+                {
+                    cout <<space3
+                         <<"||"<<space<<"     ||\n";
+                }
+            }
         }
     }
 }
