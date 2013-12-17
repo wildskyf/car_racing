@@ -56,13 +56,13 @@ void mycar_path(char path)
     if(path == 75)   // left
     {
         cout <<space<<space<<space;
-             cout <<"  N\n";
+             cout <<"||  N"<<space<<"     ||\n";
              cout <<space<<space<<space;
-             cout <<"O T O\n";
+             cout <<"||O T O"<<space<<"     ||\n";
              cout <<space<<space<<space;
-             cout <<"  N\n";
+             cout <<"||  N"<<space<<"     ||\n";
              cout <<space<<space<<space;
-             cout <<"O U O\n";
+             cout <<"||O U O"<<space<<"     ||\n";
     }
   /*  else if(path == 0)
     {
@@ -77,14 +77,14 @@ void mycar_path(char path)
     }*/
     else if(path == 77)
     {
-        cout <<space<<space<<space<<space;
-             cout <<"  N\n";
-             cout <<space<<space<<space<<space;
-             cout <<"O T O\n";
-             cout <<space<<space<<space<<space;
-             cout <<"  N\n";
-             cout <<space<<space<<space<<space;
-             cout <<"O U O\n";
+        cout <<space<<space<<space<<"||"<<space;
+             cout <<"  N  ||\n";
+             cout <<space<<space<<space<<"||"<<space;
+             cout <<"O T O||\n";
+             cout <<space<<space<<space<<"||"<<space;
+             cout <<"  N  ||\n";
+             cout <<space<<space<<space<<"||"<<space;
+             cout <<"O U O||\n";
     }
 
 

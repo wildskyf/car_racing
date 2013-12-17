@@ -111,9 +111,9 @@ void control_path()
         {
 
             path = getch();
-
             mycar_path(path);//75for left , 77 for left
         }
+        cout << "\n";
     }
 }
 
@@ -123,7 +123,7 @@ void game()
     cout << "Press any key to start\n";
     system("pause");
     system("cls");
-//    road();
+ //   road();
     control_path();
 }
 
