@@ -2,52 +2,43 @@
 #include<stdlib.h>
 #include"processing.h"
 #include<time.h>
-#include"graghic.h"
-
-constexpr int width =27;
+#include"graphic.h"
+constexpr int width =35;
 using namespace std;
-const string space = "\t";
 const string space3 = "\t\t\t";
+
+
 void firstmenu()
 {
     title();
-    string item[3];
+    string item[4];
     item[0]="play!";
     item[1]="setting";
-    item[2]="exit";
-    for(int a=0; a<3; a++)
+    item[2]="help";
+    item[3]="exit";
+    for(int a=0; a<4; a++)
     {
         cout<<"\n("<<a+1<<") "<<item[a].c_str()<<"\n";
     }
 }
-void longtab()
-{
-    for(int a=0; a<width; a++)
-    {
-        cout<<"#";
-    }
-}
-
-void keepcenter(string s)
-{
-    for(int a=0; a<4; a++)
-    {
-        cout<<" ";
-    }
-    cout<<s.c_str();
-}
-
 
 void title()
 {
     system("cls");
     longtab();
     cout<<"\n\n";
-    string s="Racing Driving Game";
-    keepcenter(s);
+    cout<<"\tRacing Driving Game";
     cout<<"\n\n";
     longtab();
     cout<<"\n";
+}
+
+void longtab()
+{
+    for(int a=0; a<width; a++)
+    {
+        cout<<"#";
+    }
 }
 
 // -1 for left, 0 for center, 1 for right
@@ -62,25 +53,25 @@ void mycar_path(char path,int *timec)
         if(*timec% 2 ==0)
         {
             cout <<space3
-                 <<"||  N"<<space<<"     ||\n"
+                 <<"||  N\t     ||\n"
                  <<space3
-                 <<"  O T O"<<space<<"\n"
+                 <<"  O T O\t\n"
                  <<space3
-                 <<"||  N"<<space<<"     ||\n"
+                 <<"||  N\t     ||\n"
                  <<space3
-                 <<"  O U O"<<space<<"\n";
+                 <<"  O U O\t\n";
 
         }
         else
         {
             cout <<space3
-                 <<"    N"<<space<<"\n"
+                 <<"    N\t\n"
                  <<space3
-                 <<"||O T O"<<space<<"     ||\n"
+                 <<"||O T O\t     ||\n"
                  <<space3
-                 <<"    N"<<space<<"\n"
+                 <<"    N\t\n"
                  <<space3
-                 <<"||O U O"<<space<<"     ||\n";
+                 <<"||O U O\t     ||\n";
 
         }
     }
@@ -90,25 +81,25 @@ void mycar_path(char path,int *timec)
         if(*timec % 2 ==0)
         {
             cout <<space3
-                 <<"||"<<space<<"  N  ||\n"
+                 <<"||\t  N  ||\n"
                  <<space3
-                 <<"  "<<space<<"O T O\n"
+                 <<"  \tO T O\n"
                  <<space3
-                 <<"||"<<space<<"  N  ||\n"
+                 <<"||\t  N  ||\n"
                  <<space3
-                 <<"  "<<space<<"O U O\n";
+                 <<"  \tO U O\n";
 
         }
         else
         {
             cout <<space3
-                 <<"  "<<space<<"  N\n"
+                 <<"  \t  N\n"
                  <<space3
-                 <<"||"<<space<<"O T O||\n"
+                 <<"||\tO T O||\n"
                  <<space3
-                 <<"  "<<space<<"  N\n"
+                 <<"  \t  N\n"
                  <<space3
-                 <<"||"<<space<<"O U O||\n";
+                 <<"||\tO U O||\n";
 
         }
     }
@@ -120,14 +111,13 @@ void road(int *timec)
 {
     if(*timec % 2 ==0)
     {
-        for(int b=0; b<4; b++)
-        {
-            for(int a=0; a<4; a++)
+
+            for(int a=0; a<20; a++)
             {
                 if(a % 2 ==0)
                 {
                     cout <<space3
-                         <<"||"<<space<<"     ||\n";
+                         <<"||\t     ||\n";
                 }
                 else
                 {
@@ -135,14 +125,11 @@ void road(int *timec)
                 }
 
             }
-            //   cout <<"\n";
-        }
+
     }
     else
     {
-        for(int b=0; b<4; b++)
-        {
-            for(int a=0; a<4; a++)
+            for(int a=0; a<20; a++)
             {
                 if(a % 2 ==0)
                 {
@@ -151,9 +138,8 @@ void road(int *timec)
                 else
                 {
                     cout <<space3
-                         <<"||"<<space<<"     ||\n";
+                         <<"||\t     ||\n";
                 }
-            }
         }
     }
 }

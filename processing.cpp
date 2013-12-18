@@ -3,10 +3,9 @@
 #include"main.h"
 #include"mywindowscommand.h"
 #include<stdlib.h>
-#include"graghic.h"
+#include"graphic.h"
 #include"processing.h"
-#include<stdio.h>
-#include <conio.h>
+#include<conio.h>
 using namespace std;
 
 
@@ -66,6 +65,10 @@ void menuprocess(int choice)
         }
         else if(choice ==3)
         {
+
+        }
+        else if(choice == 4)
+        {
             break;
         }
         else
@@ -75,8 +78,8 @@ void menuprocess(int choice)
             break;
         }
     }
-    while(choice!=3 );
-    if(choice!=3)
+    while(choice!=4 );
+    if(choice!=4)
     {
         main();
     }
