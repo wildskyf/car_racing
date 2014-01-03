@@ -13,46 +13,57 @@ void firstmenu()
     title();
     string item[4];
     item[0]="play!";
-    item[1]="setting";
-    item[2]="help";
+    item[1]="setting (not yet)";
+    item[2]="help (not yet)";
     item[3]="exit";
     for(int a=0; a<4; a++)
     {
-        cout<<"\n("<<a+1<<") "<<item[a].c_str()<<"\n";
+        cout <<"\n"<<space3<<"("<<a+1<<") "<<item[a].c_str()<<"\n";
     }
 }
 
 void title()
 {
     system("cls");
+
     longtab();
-    cout<<"\n\n";
-    cout<<"\tRacing Driving Game";
-    cout<<"\n\n";
+    cout<<"\n\n"
+        <<space3
+        <<"\tRacing Driving Game"
+        <<"\n\n";
     longtab();
     cout<<"\n";
 }
 
 void longtab()
 {
+    cout <<space3<<"\b";
     for(int a=0; a<width; a++)
     {
         cout<<"#";
     }
 }
 
-// -1 for left, 0 for center, 1 for right
-
-void mycar_path(char path,int *timec)
+int road(int timec,char path)
 {
     system("cls");
-    road(timec);
-    if(path == 75)   // left
+    if(timec% 2 ==0)
     {
-
-        if(*timec% 2 ==0)
+        for(int a=0; a<20; a++)
         {
-            cout <<space3
+            if(a % 2 ==0)
+            {
+                cout <<space3
+                     <<"||\t     ||\n";
+            }
+            else
+            {
+                cout <<"\n";
+            }
+        }
+            if(path == 75)   // left
+            {
+                cout <<space3
                  <<"||  N\t     ||\n"
                  <<space3
                  <<"  O T O\t\n"
@@ -60,27 +71,10 @@ void mycar_path(char path,int *timec)
                  <<"||  N\t     ||\n"
                  <<space3
                  <<"  O U O\t\n";
-
-        }
-        else
-        {
-            cout <<space3
-                 <<"    N\t\n"
-                 <<space3
-                 <<"||O T O\t     ||\n"
-                 <<space3
-                 <<"    N\t\n"
-                 <<space3
-                 <<"||O U O\t     ||\n";
-
-        }
-    }
-
-    else if(path == 77)
-    {
-        if(*timec % 2 ==0)
-        {
-            cout <<space3
+            }
+             else if(path == 77)  //right
+             {
+                 cout <<space3
                  <<"||\t  N  ||\n"
                  <<space3
                  <<"  \tO T O\n"
@@ -88,11 +82,48 @@ void mycar_path(char path,int *timec)
                  <<"||\t  N  ||\n"
                  <<space3
                  <<"  \tO U O\n";
+             }
+             else
+             {
+                 cout <<space3
+                 <<"||\t  N  ||\n"
+                 <<space3
+                 <<"  \tO T O\n"
+                 <<space3
+                 <<"||\t  N  ||\n"
+                 <<space3
+                 <<"  \tO U O\n";
+             }
 
-        }
-        else
+    }
+    else
+    {
+        for(int a=0; a<20; a++)
         {
-            cout <<space3
+            if(a % 2 ==0)
+            {
+                cout <<"\n";
+            }
+            else
+            {
+                cout <<space3
+                     <<"||\t     ||\n";
+            }
+        }
+            if(path == 75)   // left
+            {
+                cout <<space3
+                     <<"    N\t\n"
+                     <<space3
+                     <<"||O T O\t     ||\n"
+                     <<space3
+                     <<"    N\t\n"
+                     <<space3
+                     <<"||O U O\t     ||\n";
+            }
+            else if(path == 77)
+             {
+                 cout <<space3
                  <<"  \t  N\n"
                  <<space3
                  <<"||\tO T O||\n"
@@ -100,47 +131,43 @@ void mycar_path(char path,int *timec)
                  <<"  \t  N\n"
                  <<space3
                  <<"||\tO U O||\n";
-
-        }
-    }
-
-
-}
-
-void road(int *timec)
-{
-    if(*timec % 2 ==0)
-    {
-
-            for(int a=0; a<20; a++)
+             }
+            else
             {
-                if(a % 2 ==0)
-                {
-                    cout <<space3
-                         <<"||\t     ||\n";
-                }
-                else
-                {
-                    cout <<"\n";
-                }
-
+                cout <<space3
+                 <<"  \t  N\n"
+                 <<space3
+                 <<"||\tO T O||\n"
+                 <<space3
+                 <<"  \t  N\n"
+                 <<space3
+                 <<"||\tO U O||\n";
             }
+    }
 
-    }
-    else
-    {
-            for(int a=0; a<20; a++)
-            {
-                if(a % 2 ==0)
-                {
-                    cout <<"\n";
-                }
-                else
-                {
-                    cout <<space3
-                         <<"||\t     ||\n";
-                }
-        }
-    }
 }
 
+void beforegame()
+{
+    cout <<"\n\n\n\n\n"<<space3;
+    cout << "Please use arrow key to control car\n\n\n";
+    cout <<space3;
+    cout << "Press any key to start\n\n\n";
+    cout <<space3;
+    cout << "Press  [q]   to end\n\n\n";
+}
+
+void aftergame(int score)
+{
+    system("cls");
+    cout <<"\n\n\n\n\n";
+    longtab();
+    cout<<"\n\n"
+        <<space3
+        <<"\t  Game over\n\n"
+        <<space3
+        <<"\t\bYour score is "<<score
+        <<"\n\n";
+    longtab();
+    cout<<"\n\n\n";
+}

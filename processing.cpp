@@ -6,6 +6,9 @@
 #include"graphic.h"
 #include"processing.h"
 #include<conio.h>
+#include <time.h>
+#include<windows.h>
+
 using namespace std;
 
 
@@ -18,7 +21,7 @@ int main_inerface()
 
 int inputchoice()
 {
-    cout<<"\nPlease input your choice===>";
+    cout <<"\n\t\t\tPlease input your choice===>";
     int choice=0;
     cin>>choice;
     return choice;
@@ -33,7 +36,7 @@ void menuprocess(int choice)
         if( choice == 1)
         {
             title();
-            cout<<"Your score is "<<Selectdifficulty()<<"\n";
+            Selectdifficulty();
             system("pause");
             break;
         }
@@ -85,51 +88,54 @@ void menuprocess(int choice)
     }
 }
 
-int Selectdifficulty()
+void Selectdifficulty()
 {
-    cout << "Select a difficulty";
+    cout << "\t\t\tSelect a difficulty";
 
     for(int a=1; a<=3; a++)
     {
-        cout << "\n\n("<<a<<")";
+        cout << "\n\n\t\t\t("<<a<<")";
 
-        for(int b=1; b<=a; b++)
+        for(int b=5; b>=a; b--)
         {
             cout << "*";
         }
     }
     cout<<"\n";
-    inputchoice();
-    game();
-
-    return 0;
+    int diffculty = inputchoice()*100;
+    system("cls");
+    beforegame();  // how to manufactor
+    aftergame(game(diffculty));   // score
 }
 
-void control_path()
+int control_path(int diffculty)
 {
-    int timecount= 0;
-    int *timec = &timecount;
-    char ch1, path;
-    while( ch1 = getch() )
+    int tim = diffculty ;
+    char ch1, path = 0 ;
+    int pre = clock() ;
+    int start = clock();
+    int endsituation;
+    while(  ch1 != 'q' && endsituation != 0 )
     {
-        if(ch1 == -32)
+        if( kbhit() )
         {
-
-       //     path = ;
-            mycar_path(getch(),timec);//75for left , 77 for left
-            timecount++;
+            ch1 = getch();
+            path = 1 ;
         }
-    //    cout << "\n";
+        if( path || clock()-pre > tim )
+        {
+            endsituation = road(clock()%10,ch1);    // return 0  == end game
+            path = 0 ;
+            pre = clock() ;
+        }
     }
+    return (clock() - start) /10;
 }
 
-void game()
+int game(int diffculty)
 {
-
-    cout << "Press any key to start\n";
     system("pause");
     system("cls");
-
-    control_path();
+    return control_path(diffculty);
 }
 
