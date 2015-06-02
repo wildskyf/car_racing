@@ -29,9 +29,9 @@ void Road(int n) // print road
             printf(" ");
         }
         gotoxy(25,a);
-        printf("¢i");
+        printf("ï¿½i");
         gotoxy(39,a);
-        printf("¢i");
+        printf("ï¿½i");
         gotoxy(25,a+1);
         printf(" ");
         gotoxy(39,a+1);
@@ -137,31 +137,31 @@ void Countdown(int s,int ctrl) // count down
     */
     s=(s/10)*65;
     gotoxy(53,16);
-    printf("¢i¢i¢i");gotoxy(53,17);
-    printf("    ¢i");gotoxy(53,18);
-    printf("¢i¢i¢i");gotoxy(53,19);
-    printf("    ¢i");gotoxy(53,20);
-    printf("¢i¢i¢i");
+    printf("ï¿½iï¿½iï¿½i");gotoxy(53,17);
+    printf("    ï¿½i");gotoxy(53,18);
+    printf("ï¿½iï¿½iï¿½i");gotoxy(53,19);
+    printf("    ï¿½i");gotoxy(53,20);
+    printf("ï¿½iï¿½iï¿½i");
     if(ctrl != 0)
     {
         Sleep(s);
     }
     gotoxy(53,16);
-    printf("¢i¢i¢i");gotoxy(53,17);
-    printf("    ¢i");gotoxy(53,18);
-    printf("¢i¢i¢i");gotoxy(53,19);
-    printf("¢i    ");gotoxy(53,20);
-    printf("¢i¢i¢i");
+    printf("ï¿½iï¿½iï¿½i");gotoxy(53,17);
+    printf("    ï¿½i");gotoxy(53,18);
+    printf("ï¿½iï¿½iï¿½i");gotoxy(53,19);
+    printf("ï¿½i    ");gotoxy(53,20);
+    printf("ï¿½iï¿½iï¿½i");
     if(ctrl != 0)
     {
         Sleep(s);
     }
     gotoxy(53,16);
-    printf("   ¢i  ");gotoxy(53,17);
-    printf("   ¢i  ");gotoxy(53,18);
-    printf("   ¢i  ");gotoxy(53,19);
-    printf("   ¢i  ");gotoxy(53,20);
-    printf("   ¢i  ");
+    printf("   ï¿½i  ");gotoxy(53,17);
+    printf("   ï¿½i  ");gotoxy(53,18);
+    printf("   ï¿½i  ");gotoxy(53,19);
+    printf("   ï¿½i  ");gotoxy(53,20);
+    printf("   ï¿½i  ");
     if(ctrl != 0)
     {
         Sleep(s);

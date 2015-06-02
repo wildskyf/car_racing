@@ -26,19 +26,19 @@ void SetCarName(char name[], int a)
     gotoxy(19,2);
     Line(18);
     gotoxy(19,3);
-    printf("¢i");
+    printf("ï¿½i");
     gotoxy(53,3);
-    printf("¢i");
+    printf("ï¿½i");
     gotoxy(19,4);
-    printf("¢i");
+    printf("ï¿½i");
     SetColor();
     printf("      The Name of %s Car   %s",a==0?"Your ":"Eneny's",a==0?"  ":"");  // the space is used to make the boarder tidy
     SetColor(color);
-    printf("¢i");
+    printf("ï¿½i");
     gotoxy(19,5);
-    printf("¢i");
+    printf("ï¿½i");
     gotoxy(53,5);
-    printf("¢i");
+    printf("ï¿½i");
     gotoxy(19,6);
     Line(18);
     SetColor();
